@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Welcome to TJ READER</h1>
-            <p>Upload, edit, or create your text or JSON files easily.</p>
-        </header>
-        <main class="main-content">
+    <header>
+        <h1>Welcome to TJ READER</h1>
+        <p>Upload, edit, or create your text or JSON files easily.</p>
+    </header>
+
+    <main>
+        <section id="uploadSection">
             <form id="uploadForm">
-                <label for="fileUpload" class="upload-label">Choose a file:</label>
+                <label for="fileUpload">Choose a file:</label>
                 <input type="file" id="fileUpload" accept=".txt, .json">
                 <button type="submit">Upload</button>
             </form>
@@ -25,18 +26,23 @@
                 <textarea id="editTextArea" rows="10" cols="50"></textarea>
                 <button id="saveButton">Save Changes</button>
             </div>
-            <div class="create-section">
-                <h2>Create New File</h2>
-                <label for="fileType">Select file type:</label>
-                <select id="fileType">
-                    <option value="text">Text File</option>
-                    <option value="json">JSON File</option>
-                </select>
-                <textarea id="createTextArea" rows="10" cols="50"></textarea>
-                <button id="createButton">Create File</button>
-            </div>
-        </main>
-    </div>
+        </section>
+
+        <section id="createSection">
+            <h2>Create New File</h2>
+            <label for="fileType">Select file type:</label>
+            <select id="fileType">
+                <option value="text">Text File</option>
+                <option value="json">JSON File</option>
+            </select>
+            <textarea id="createTextArea" rows="10" cols="50"></textarea>
+            <button id="createButton">Create File</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TJ READER. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
